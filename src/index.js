@@ -31,10 +31,6 @@ function addExpenseReducer(state = initialState, action){
 }
 
 
-
-const reducer = (state = initialState, action) => state;
-
-
 const action = {
   type: 'ADD_EXPENSE',
   payload: {
@@ -43,8 +39,6 @@ const action = {
     quantity: 1
   }
 }
-
-
 
 const store = configureStore({ reducer: addExpenseReducer });
 console.log(store);
@@ -62,7 +56,7 @@ store.dispatch({
 console.log(store.getState());
 
 
-
+//ReactDOM.render(
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

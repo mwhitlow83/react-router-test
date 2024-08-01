@@ -15,11 +15,11 @@ export default function ListExpense(props) {
     </tr>
   ));
 
-  const expenseType = props.match.params.id ?? 'All';
+ // const expenseType = props.match.params.id ?? 'All';
     
   return (
     <div>
-     <h2> List Expense ({ expenseType })</h2>
+     <h2> List Expense </h2>
 <table>
   <thead>
     <tr>
