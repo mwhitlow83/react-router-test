@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+import Home from './Components/Home';
+import ListExpense from './Components/ListExpense';
+import NewExpense from './Components/NewExpense';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>This is redux</h1>
+      <BrowserRouter>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/new">New Expenses</Link></li>
+        <li><Link to="/list">List Expenses</Link></li>
+      </ul>
+          <Routes>
+              <Route exact path="/" Component={Home} />
+              <Route path="/new" Component={NewExpense} />
+              <Route path="/list" Component={ListExpense} />
+          </Routes>
+      </BrowserRouter>
     </div>
   );
 }
