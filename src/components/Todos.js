@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { connect } from 'react-redux';
 import { addTodos, removeTodos, updateTodos, completeTodos } from '../redux/reducer';
-import { useRef } from 'react';
+
 
 const mapStateToProps = (state) => {
   return {
@@ -23,24 +23,11 @@ const Todos = (props) => {
  
   const [todo, setTodo] = useState("");
 
-const inputRef = useRef(true);
 
-const changeFocus = () => {
-  inputRef.current.disabled = false;
-  inputRef.current.focus();
-}
-
-const update  = (id, value, e) => {
-if(e.which === 13) {
-  //here 13 is key code for enter key
-  props.updateTodo({id, item:value });
-  inputRef.current.disabled = true;
-}
-}
   const handleChange = (e) => {
     setTodo(e.target.value);
   }
- console.log('props', props);
+ //console.log('props', props);
  
   return (
     <div className='addTodos'>
@@ -54,14 +41,7 @@ if(e.which === 13) {
         completed: false,
       })}>Add</button>
     <br/>
-      <ul>
-        {
-          props.todos.map((item) => {
-            return  ;
-
-          })}
-        
-      </ul>
+      
     </div>
   );
 };
