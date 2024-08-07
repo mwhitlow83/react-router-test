@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { connect } from 'react-redux';
 import { addTodos, removeTodos, updateTodos, completeTodos } from '../redux/reducer';
-
+//import { GoPlus } from 'react-icons/go';
 
 const mapStateToProps = (state) => {
   return {
@@ -39,7 +39,9 @@ const Todos = (props) => {
         id: Math.floor(Math.random()*1000),
         item: todo, 
         completed: false,
-      })}>Add</button>
+      })}>
+       
+        </button>
     <br/>
       
     </div>

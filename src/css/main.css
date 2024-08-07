@@ -1,0 +1,137 @@
+html{
+line-height: 1.15;
+}
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+}
+
+body{
+background: linear-gradient(90deg, #141e30, #243b55);
+color: #fff;
+font-family: 'Roboto', sans-serif;
+}
+.App h1{
+    display: inline;
+    text-align: center;
+    margin-bottom: 2rem;
+
+
+}
+
+.addTodos{
+    display: flex;
+    justify-content: center;
+    
+}
+.todo-input{
+    padding: 0.5rem;
+    width: 40vw;
+    border: none;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.todo-input:focus{
+    outline: none;
+    border: 2px solid #333;
+}
+
+.add-btn{
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-btn:focus{
+    outline: none;
+}
+.displaytodos{
+    display: flex;
+    justify-content: center;
+  
+    margin-top: 2rem;
+}
+.displaytodos .buttons{
+    
+    margin-top: 1rem;
+}
+.displaytodos .buttons button{
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.displaytodos .buttons button:focus{
+    outline: none;
+}
+.displaytodos .buttons button:not(:last-child){
+    margin-right: 1rem;
+}
+.displaytodos ul{
+    list-style: none;
+    text-align: center;
+    padding: 1rem;
+    width: 40vw;
+    border-radius: 5px;
+    background: #333;
+    margin-top: 1rem;
+
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: #333;
+    border-radius: 5px;
+}
+.card textarea{
+    background: #333;
+    color: #fff;
+    border: none;
+    resize: none;
+    width: 80%;
+}   
+.card textarea:disabled{
+    background: #333;
+    color: #fff;
+    border: none;
+    resize: none;
+    width: 80%;     
+
+}
+.card .btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.card .btns button{
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.card .btns button:focus{
+    outline: none;
+}
+.completed{
+    position: absolute;
+    text-decoration: line-through;
+    color: #333;
+    font-size: 8rem;
+}
+

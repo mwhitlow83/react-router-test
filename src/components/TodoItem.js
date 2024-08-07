@@ -25,12 +25,14 @@ if(e.which === 13) {
                       defaultValue={item.item} 
                       onKeyPress={(e) => update(item.id, inputRef.current.value, e)}/>
             
-            
+        <div className='btns'>
             <button onClick={() => changeFocus()}>Edit</button> 
             <button onClick={() => completeTodo(item.id)}>Complete</button> 
             <button onClick={() => removeTodo(item.id)}>Delete</button>
+        </div>
+           {item.completed && <span className='completed'>Done</span>}
             </li>
   )
-}
+};
 
 export default TodoItem
