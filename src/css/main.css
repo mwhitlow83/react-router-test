@@ -35,9 +35,6 @@ flex-direction: column;
     text-shadow: 0 0 5px #433aa8, 3px -1px 5px #271c6c;
 
 }
-
-
-
 .addTodos {
     display: flex;
     justify-content: center;
@@ -84,11 +81,11 @@ flex-direction: column;
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  
+   align-items: center;
     margin-top: 2rem;
 }
 .displaytodos .buttons {
+  
   margin-bottom: 2rem;
 }
 .displaytodos .buttons button {
